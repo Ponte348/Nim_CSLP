@@ -31,3 +31,51 @@ It's suitable for systems programming, general-purpose programming, scripting, g
 - **Performance**: compiles to C, C++ and JavaScript, resulting in high-performance executables that rival the speed of native C and C++ applications
 - **Concurrency**: provides built-in support for parallel and concurrent programming with its async/await and parallel statement features
 
+# Syntax
+
+Syntax is inspired by python, making it easier to read and write.
+
+Some features include:
+- Indentation-based scoping
+- Type inference
+- First class functions
+- Multiple dispatch (overloading)
+- Uses [[Uniform Function Class Syntax]]
+- Object-Oriented Programming: although it is not imposed to programmers, **Nim** accommodates OOP program design, featuring inheritance and runtime method dispatch
+- Global Namespaces
+- Case sensitivity
+
+# Metaprogramming
+
+**Nim**'s macro system offers powerful compile-time metaprogramming capabilities. 
+These macros function as code generators during the compilation process, empowering developers to create more expressive and versatile code. 
+**Nim**'s macro system is turing-complete, signifying its ability to express any computation that a turing machine can perform. Common applications of macros in Nim encompass code generation, domain-specific languages and optimization.
+
+The metaprogramming features in **Nim** provide support for generics, templates and macros, allowing for the extension of **Nim** with various programming paradigms and helping developers minimize boilerplate code.
+The standard library incorporates async-await using these metaprogramming features and the **Nim** community has developed numerous packages implementing diverse programming paradigms.
+
+# Standard Library
+
+**Nim**'s standard library is extensive, including:
+- **Data structures**: lists, sets, hash tables, ...
+- **File I/O**: reading, writing and manipulating files and directories
+- **Networking**: Sockets, HHTP and other network protocols
+- **Concurrency**: Threads, locks and async I/O
+- **Mathematics**: basic math operations, random number generation and more
+- **Cryptography**: Hashing, encryption and more
+- **Regular expressions**: pattern matching and manipulation
+- Dates and times Timezone-aware date and time operations
+
+# Conclusion
+
+To summarize, **Nim** can be compared to other languages:
+- **Syntax**: similar to Python
+- **Performance**: C and C++
+- **Features**: 
+
+# Community and Ecosystem
+
+**Nim** has a very active community:
+
+- Official website: https://nim-lang.org/
+- GitHub repository: https://github.com/nim-lang/Nim
