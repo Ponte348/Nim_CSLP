@@ -10,6 +10,7 @@ For this presentation you will need three things:
 2. C Compiler
 3. Text Editor
 
+
 ### 1. Nim Compiler
 The easiest way of installing **Nim** is using _choosenim_, simply run the following commands:
 ```bash
@@ -17,7 +18,7 @@ $ sudo apt update
 $ sudo apt install curl
 $ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 ```
-And follow the onscreen instructions  
+And follow the onscreen instructions\
 **Don't forget to add _export PATH=/home/<your-user>/.nimble/bin:$PATH_ to PATH** (switch "<your-user>" with your actual user)
 ```bash
 $ nano ~/.bashrc
@@ -31,13 +32,17 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH=/home/<your-user>/.nimble/bin:$PATH
 ```
 
+
 ### 2. C Compiler
 
 If you're using Unix you should have a C compiler like **gcc**, but others are usable as well.
 
+
 ### 3. Text Editor
 
-Use whatever you prefer
+Use whatever you prefer, we will be using VSCode.
+
+
 
 ### Conclusion
 
@@ -50,6 +55,7 @@ Nim Compiler Version 2.0.0 [Linux: amd64]
 Compiled at 2023-08-01
 Copyright (c) 2006-2023 by Andreas Rumpf
 ```
+
 
 ### Troubleshooting
 
