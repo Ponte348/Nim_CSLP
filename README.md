@@ -1,5 +1,5 @@
 # Nim Presentation
-### Group 6 Students: Pedro Ponte 98059; André Cardoso XXXXXX; Bruno Páscoa XXXXXX;
+### Group 6 Students: Pedro Ponte 98059; André Cardoso 108269; Bruno Páscoa 107418;
 
 ## Installation guide
 
