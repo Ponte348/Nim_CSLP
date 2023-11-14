@@ -40,7 +40,7 @@ If you're using Unix you should have a C compiler like **gcc**, but others are u
 
 ### 3. Text Editor
 
-Use whatever you prefer, we will be using VSCode with the Nim language support extension (Marketplace: kosz78.nim).
+Use whatever you prefer, we will be using VSCode with the [Nim](https://marketplace.visualstudio.com/items?itemName=nimsaem.nimvscode) plugin.
 
 
 
