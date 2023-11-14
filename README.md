@@ -69,8 +69,9 @@ If you find any errors, follow these steps:
  
 
 
-# Next Part
-TODO: maybe o VSCode tem alguma extensão útil?
+## Files Needed
+
+Browse to your work directory and clone our Repo
 
 
 
