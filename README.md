@@ -17,8 +17,8 @@ $ sudo apt update
 $ sudo apt install curl
 $ curl https://nim-lang.org/choosenim/init.sh -sSf | sh
 ```
-And follow the onscreen instructions
-**Don't forget to add _export PATH=/home/<your-user>/.nimble/bin:$PATH_ to PATH** (switch "<your-user" with your actual user)
+And follow the onscreen instructions  
+**Don't forget to add _export PATH=/home/<your-user>/.nimble/bin:$PATH_ to PATH** (switch "<your-user>" with your actual user)
 ```bash
 $ nano ~/.bashrc
 
