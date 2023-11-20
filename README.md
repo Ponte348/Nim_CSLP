@@ -3,7 +3,7 @@
 
 ## Installation guide
 
-This guide is aimed at Users users, if you have another OS refer to the Nim official website (https://nim-lang.org/install.html)
+This guide is aimed at Unix users, if you have another OS refer to the Nim official website (https://nim-lang.org/install.html)
 
 For this presentation you will need three things:
 1. Nim Compiler
