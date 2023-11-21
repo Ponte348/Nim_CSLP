@@ -1,16 +1,16 @@
-# Tutoriais seguidos apra aprender
+# Tutoriais seguidos para aprender
 
 ## Nim in 100 seconds
 
-Pequena introdução
+Short video introduction  
 https://www.youtube.com/watch?v=WHyOHQ_GkNo
 
 ## Learn Nim in 5 minutes
 
-Para aprender os básicos sobre variáveis, tipos, estruturas de dados
+To learn basics about variables, types, data structures, etc  
 https://learnxinyminutes.com/docs/nim/
 
 ## General info
 
-Informação mais teórica, na pasta Nim tão "resumos" desta informação mais organziados
+Theoretical Info, **Nim-T** folder has this info but more organized  
 https://nimprogramming.com/about/all/
