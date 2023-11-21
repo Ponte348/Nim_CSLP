@@ -22,6 +22,8 @@ let
     arms = 2_000_000 # underscores are ignored and can be useful to write large numbers
     aboutPi = 3.15
 
+discard legs
+
 # constants are computed at compile time, this provides performance benefits
 const 
     debug = true
@@ -34,7 +36,6 @@ when compileBadCode:
 
 # The compiler will complain if the result of an expression is not used but discard bypasses it
 discard 1 > 2
-
 
 # 
 # Data Strcutures
@@ -75,9 +76,9 @@ type
     Name = string # A type alias gives you a new type that is interchangeable
     Age = int       # with the old type but is more descriptive
     Person = tuple[name: Name, age: Age] # Define data strcutures too
-    AnotherSyntax = tuple
-        fieldOne: string
-        secondField: int
+    #AnotherSyntax = tuple
+    #    fieldOne: string
+    #    secondField: int
 
 var
     john: Person = (name: "John D.", age: 26)
@@ -265,3 +266,10 @@ of aNo:
 proc strcmp(s1, s2: cstring): cint {.importc: "strcmp", nodecl.}
 let cmp = strcmp("C?", "Easy!")
 echo cmp
+
+
+
+
+# Let's discard stuff so the compiler doesn't complain
+let dummy = (letter, nLength, boar, truth, arms, aboutPi, debug, myDrink, money, description, orient, pixel, anotherArray)
+discard dummy
