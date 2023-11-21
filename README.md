@@ -1,5 +1,11 @@
-# Nim Presentation
-### Group 6 Students: Pedro Ponte 98059; André Cardoso 108269; Bruno Páscoa 107418;
+# Nim tutorial
+**Group 6 Students: Pedro Ponte 98059; André Cardoso 108269; Bruno Páscoa 107418;**  
+
+## Navigating this repository
+
+Further down this page you'll find the instructions to prepare everything you need for our presentation.  
+Additionally, we encourage you to browse our *Learning* folder, if you want to read more about what we prepared.
+
 
 ## Installation guide
 
@@ -71,7 +77,9 @@ If you find any errors, follow these steps:
 
 ## Files Needed
 
-Browse to your work directory and clone our Repo
-
+Browse to your work directory and clone our Repo: 
+```bash
+$ gh repo clone Ponte348/Nim_CSLP
+```
 
 
