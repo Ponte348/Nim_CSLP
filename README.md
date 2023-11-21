@@ -77,7 +77,7 @@ If you find any errors, follow these steps:
 
 ## Files Needed
 
-Browse to your work directory and clone our Repo: 
+Navigate to your work directory and clone our Repo: 
 ```bash
 $ gh repo clone Ponte348/Nim_CSLP
 ```
