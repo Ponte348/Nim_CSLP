@@ -82,4 +82,6 @@ Navigate to your work directory and clone our Repo:
 $ gh repo clone Ponte348/Nim_CSLP
 ```
 
+The exercises will be in **Nim_Exercises.pdf** and the presentation slides are **Nim_Presentation**.
+
 
