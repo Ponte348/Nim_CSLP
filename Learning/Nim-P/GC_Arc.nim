@@ -1,8 +1,8 @@
-# Compile using nim c --mm:orc --expandArc:main arc.nim
+# Compile using nim r --mm:orc --expandArc:main GC_Arc.nim
 
-proc main = 
+proc main =
     let mystr = stdin.readLine()
-    
+
     case mystr
     of "hello":
         echo "Nice to meet you!"
