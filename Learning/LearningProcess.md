@@ -14,3 +14,13 @@ https://learnxinyminutes.com/docs/nim/
 
 Theoretical info, **Nim-T** folder has this info but more organized  
 https://nimprogramming.com/about/all/
+
+## Nim by Example
+
+A collection of examples, from basic to advanced
+https://nim-by-example.github.io/case/
+
+## Nim in Action
+
+Book about Nim, it's a bit outdated but still useful. You can access it through O'Reilly's learning platform (UA students have access)
+https://learning.oreilly.com/library/view/nim-in-action/9781617293436/
