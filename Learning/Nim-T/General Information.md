@@ -1,5 +1,3 @@
-#nim #cslp
-
 # Introduction
 
 **Nim** is a statically-typed, high-level programming languages. 
@@ -13,7 +11,7 @@ It's suitable for systems programming, general-purpose programming, scripting, g
 **Nim** is often characterized by its Efficiency, Expressiveness and Elegance:
 - **Nim** generates native, dependency-free executables that do not rely on a virtual machine, enabling compact size and effortless redistribution.
 - The **Nim** compiler and its generated executables are compatible with all major platforms, including Windows, Linux and macOS.
-- **Nim**'s memory management, inspired by C++ and Rust, is deterministic and customizable with destructors and move semantics, making it well-suited for embedded, hard-realtime systems.
+- **Nim**'s memory management, inspired by C++ and Rust, is deterministic and customizable, able to use destructors and move semantics, making it well-suited for embedded, hard-realtime systems.
 - Modern concepts such as zero-overhead iterators and compile-time evaluation of user-defined functions, coupled with a preference for value-based datatypes allocated on the stack, result in highly performed code.
 - **Nim** supports various backends, compiling to C, C++ or JavaScript (ew), making it an ideal choice for both backend and frontend needs.
 - **Nim** is self-contained, as both the compiler and the standard library are implemented in **Nim** itself.
@@ -33,14 +31,14 @@ It's suitable for systems programming, general-purpose programming, scripting, g
 
 # Syntax
 
-Syntax is inspired by python, making it easier to read and write.
+Syntax is inspired by Python, making it easier to read and write.
 
 Some features include:
 - Indentation-based scoping
 - Type inference
 - First class functions
 - Multiple dispatch (overloading)
-- Uses [[Uniform Function Class Syntax]]
+- Uses Uniform Function Class Syntax
 - Object-Oriented Programming: although it is not imposed to programmers, **Nim** accommodates OOP program design, featuring inheritance and runtime method dispatch
 - Global Namespaces
 - Case sensitivity
@@ -57,21 +55,21 @@ The standard library incorporates async-await using these metaprogramming featur
 # Standard Library
 
 **Nim**'s standard library is extensive, including:
-- **Data structures**: lists, sets, hash tables, ...
-- **File I/O**: reading, writing and manipulating files and directories
-- **Networking**: Sockets, HHTP and other network protocols
-- **Concurrency**: Threads, locks and async I/O
-- **Mathematics**: basic math operations, random number generation and more
-- **Cryptography**: Hashing, encryption and more
+- **Data structures**: Lists, Sets, Hash Tables, bitsets, etc...
+- **File I/O**: file manipulation, file system traversal, streams, etc...
+- **Networking**: Sockets, HTTP and other network protocols
+- **Concurrency**: Threads, locks, channels and async/await support
+- **Mathematics**: Basic math operations, complex numbers, trigonometry, statistics and more
+- **Cryptography**: Pseudo random number generation, hashing, encryption and more
 - **Regular expressions**: pattern matching and manipulation
-- Dates and times Timezone-aware date and time operations
+- **Dates and times**: Timezone-aware date and time operations
 
 # Conclusion
 
 To summarize, **Nim** can be compared to other languages:
 - **Syntax**: similar to Python
 - **Performance**: C and C++
-- **Features**: 
+- **Features**: Rich stdlib, with a vast array of bindings to C and C++ libraries
 
 # Community and Ecosystem
 
