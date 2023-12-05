@@ -49,6 +49,7 @@ expandMacros:
     a = 45
     init b
     log b == 0
+    echo a # 12
 
 # Macros are extremely powerful and can be used to implement new language features
 # By principle, we should try to use first a procedure, then a template, and only

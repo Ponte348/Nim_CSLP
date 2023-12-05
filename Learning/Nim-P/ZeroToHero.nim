@@ -1,9 +1,14 @@
 import math
 
+{.push hint[XDeclaredButNotUsed]: off.}
+{.push hint[DuplicateModuleImport]: off.}
+
 # This is a comment
 
 #[  This is a multiline comment
 ]#
+
+## Comments are parsed by the compiler, so they can be used to document code
 
 # Printing is done with echo
 echo "Hello World!"
@@ -179,7 +184,7 @@ proc add(numbers: varargs[int]): int =
 
 # Procedures with return values have a result variable initialized
 
-proc add(a, b: int): int =
+proc add*(a, b: int): int = # Procedures annotated with * are visible in other modules
     result = a + b
 
 proc add2(a, b: int): int =
@@ -218,20 +223,25 @@ type
 proc sound(this: Cat) =
     echo this.name, " says meow"
 let cat = Cat(name: "Fluffy")
+
 cat.sound() # Prints "Fluffy says meow"
 sound(cat) # Also prints "Fluffy says meow"
 
 # To make a procedure that modifies a per-value object, use the 'var' keyword
 proc kill(this: var Animal) =
     this.alive = false
+
 # This works because Dog is a ref object
 proc kill(this: Dog) =
     this.alive = false
 
 ### Concepts (Interfaces)
+
+# https://nim-lang.org/docs/manual_experimental.html#concepts
+
 type
     AnimalSound = concept
-        proc sound(this: Animal)
+        proc sound(this: Self)
 
 ### Generics
 
@@ -246,6 +256,9 @@ proc onlyPositive[T: Positive](x: T): T =
 # Any inheritor of Animal that has a sound() method can be passed to makeSound
 proc makeSound[T: AnimalSound](animal: T) =
     animal.sound()
+
+makeSound(cat) # Prints "Fluffy says meow"
+# makeSound(Dog(name: "Rex")) # Doesn't work because there's no sound(dog: Dog) procedure
 
 ### Type Aliases
 
@@ -325,6 +338,17 @@ import math # Import a module
 import std/[random, strutils] # Import multiple modules at once
 
 # Importing is done based on the program's location
+
+# Export
+export math # Export a module, any module that imports this one will also import math
+
+# Visibility
+type
+    Parakeet* = object of Animal # Objects annotated with * are visible in other modules
+        name*: string            # Fields annotated with * are public
+
+proc sound*(this: Parakeet) = echo this.name, " says chirp"
+
 
 ######################################## Basic IO ########################################
 
