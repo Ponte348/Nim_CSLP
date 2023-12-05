@@ -85,6 +85,6 @@ Navigate to your work directory and clone our repository to get the files needed
 $ git clone https://github.com/Ponte348/Nim_CSLP
 ```
 
-The exercises will be in **Nim_Exercises.pdf** and the presentation slides are **Nim_Presentation**.
+The exercises will be in **Nim_Exercises.pdf** and the theoretical presentation slides are **Nim_Presentation.pdf**.
 
 
