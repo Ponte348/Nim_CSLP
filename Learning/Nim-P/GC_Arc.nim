@@ -1,15 +1,25 @@
-# Compile using nim r --mm:orc --expandArc:main GC_Arc.nim
+# We can see how ORC works by inserting lifetime hooks into the generated code
 
-proc main =
-    let mystr = stdin.readLine()
+### Move semantics
+type
+    mover = object
+        x: string
 
-    case mystr
-    of "hello":
-        echo "Nice to meet you!"
-    of "bye":
-        echo "Goodbye!"
-        quit()
-    else:
-        discard
+# We'll see what this does later
+#proc `=copy`(dest: var mover; source: mover) {.error.}
 
-main()
+proc consume(x: sink mover) = discard "no implementation"
+proc produce(x: string): mover =
+    result.x = x
+
+# Compile using nim r --expandArc:regular GC_Arc.nim
+
+proc regular =
+    let tup = (produce("a"), produce("b"))
+    consume tup[0]
+    # ok, only tup[0] was consumed, tup[1] is still alive:
+    echo tup[1]
+    # but we can still use tup[0]:
+    echo tup[0]
+
+regular()

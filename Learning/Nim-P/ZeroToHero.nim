@@ -66,6 +66,7 @@ let
 # String (most are functions in strutils)
 let
     concat = "Hello " & "World!"
+    this_is_string = $10 # $ is a string converter
 
 # Overloading
 
@@ -340,90 +341,6 @@ of "yes", "Yes":
 else:
     echo "I did not understand that."
 
-# 'while', 'if', 'continue', 'break'
-
-import strutils as str # http://nim-lang.org/docs/strutils.html
-import std/random as rand
-randomize()
-echo "I'm thinking of a number between 1 and 10. Guess which!"
-let number: int = rand(1..10)
-var
-    raw_guess: string
-    guess: int
-while guess != number:
-    raw_guess = readLine(stdin)
-    if raw_guess == "": continue # skip this one
-    guess = str.parseInt(raw_guess)
-    # check if it's out of bounds
-    if guess < 1 or guess > 10:
-        echo "That's not between 1 and 10!"
-        continue
-    if guess < number:
-        echo "Too low!"
-    elif guess > number:
-        echo "Too high!"
-echo "You got it!"
-
-
-#
-# Iteration
-#
-
-for i, elem in ["Yes", "No", "Maybe"]: # or just 'for elem in'
-    echo(elem, " is at index: ", i)
-
-for k, v in items(@[(person: "You", power: 100), (person: "Me", power: 9001)]):
-    echo v
-
-let myString = """
-an <example>
-'string' to
-play with
-"""                                                       # Multiline raw string
-
-for line in splitLines(myString):
-    echo(line)
-
-for i, c in myString: # Index and letter, Or 'for j in' for just letter
-    if i mod 2 == 0: continue # Compact if form
-    elif c == 'X': break
-    else: echo(c)
-
-
-#
-# Procedures
-#
-
-type Answer = enum aYes, aNo
-
-proc ask(question: string): Answer =
-    echo(question, " (y/n)")
-    while true:
-        case readLine(stdin)
-        of "y", "Y", "yes", "Yes":
-            return Answer.aYes # Enums can be qualified
-        of "n", "N", "no", "No":
-            return Answer.aNo
-        else:
-            echo("Please answer yes or no.")
-
-proc addSugar(amount: int = 2) = # Default is 2, returns nothing
-    assert(amount > 0 and amount < 9000, "Crazy Sugar")
-    for a in 1..amount:
-        echo(a, " sugar...")
-
-case ask("Would you like sugar in your tea?")
-of aYes:
-    addSugar(6)
-of aNo:
-    echo("Just a little bit :)))")
-    addSugar()
-
-# Procedures that gets a question and returns aYes or aNo
-# addSugar takes an int (if not given, it's 2) and just prints stuff
-# case uses ask to get the value and then does stuff based on it, doesn't need an else because ask already controls that
-
-
 ######################################## FFI ########################################
 
 # Since Nim compiles to C, FFI, is easy:
@@ -433,23 +350,46 @@ echo cmp
 
 # This means that you can use any C/C++ library with Nim
 
+####################################### Compiler Options #######################################
+
+# Compile in release mode      | -d:release
+# Skip some runtime checks     | -d:danger
+# Compile with debugging info  | -d:debug
+# Optimize for size            | --opt:size
+# Optimize for speed           | --opt:speed
+
+# Memory management options
+# Use ORC (default)            | --gc:orc
+# Use ARC                      | --gc:arc
+# Use ref counting             | --gc:refc
+# Use boehm                    | --gc:boehm
+# Use go's gc                  | --gc:go
+# Use none                     | --gc:none
+
+# Exception handling options
+# Use setjmp (default)         | --exceptions:setjmp
+# Use c++ exceptions           | --exceptions:cpp
+# Use goto                     | --exceptions:goto
+
+
+# For more info: https://nim-lang.org/docs/nimc.html
+
+####################################### Tooling #######################################
+
+# Nimble is the package manager for Nim
+
+# nimble install <package>     | installs a package
+# nimble uninstall <package>   | uninstalls a package
+# nimble build                 | builds the current project
+# nimble init                  | creates a new project
+
+# Atlas is an environment manager for Nim still in development
+# https://nim-lang.org/docs/atlas.html
 
 ######################################## Macros ########################################
 
 # See metaprog.nim as it's too big to fit here :)
 
-####################################### Compiling #######################################
+######################################## Memory Management #####################################
 
-# Run with:     nim r file.nim
-# Compile with: nim c file.nim
-
-# Compile with optimizations
-# nim c -d:release file.nim
-
-# Foregoing some safety checks
-# nim c -d:danger file.nim
-
-# Compile with debugging symbols
-# nim c -d:debug file.nim
-
-# For more info: https://nim-lang.org/docs/nimc.html
+# See memory.nim as it's too big to fit here :)
